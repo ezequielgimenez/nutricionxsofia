@@ -1,6 +1,7 @@
+// app/contenido/page.tsx
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect } from "react";
 
 type HeroContent = {
   titulo: string;
@@ -47,24 +48,12 @@ export default function PanelPage() {
 
   const [newImages, setNewImages] = useState<File[]>([]);
   const [uploading, setUploading] = useState(false);
+  const [previews, setPreviews] = useState<string[]>([]);
 
-  /* --------------------------------------------------
-     PREVIEWS (derivados, NO state)
-  -------------------------------------------------- */
-  const previews = useMemo(() => {
-    return newImages.map((file) => URL.createObjectURL(file));
+  useEffect(() => {
+    setPreviews(newImages.map((file) => URL.createObjectURL(file)));
   }, [newImages]);
 
-  /* Liberar memoria */
-  useEffect(() => {
-    return () => {
-      previews.forEach((url) => URL.revokeObjectURL(url));
-    };
-  }, [previews]);
-
-  /* --------------------------------------------------
-     Cargar contenido inicial
-  -------------------------------------------------- */
   useEffect(() => {
     fetch("/api/content")
       .then((res) => res.json())
@@ -72,9 +61,6 @@ export default function PanelPage() {
       .catch(() => console.log("No hay contenido previo"));
   }, []);
 
-  /* --------------------------------------------------
-     Guardar secciones
-  -------------------------------------------------- */
   const handleSaveHero = async () => {
     await fetch("/api/content", {
       method: "POST",
@@ -102,9 +88,6 @@ export default function PanelPage() {
     alert("Sobre Mi guardado!");
   };
 
-  /* --------------------------------------------------
-     Handlers de cambios
-  -------------------------------------------------- */
   const handleHeroChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setContent({
       ...content,
@@ -123,19 +106,13 @@ export default function PanelPage() {
   };
 
   const handleSobreMiChange = (field: keyof SobreMiContent, value: string) => {
-    setContent({
-      ...content,
-      sobreMi: { ...content.sobreMi, [field]: value },
-    });
+    setContent({ ...content, sobreMi: { ...content.sobreMi, [field]: value } });
   };
 
-  /* --------------------------------------------------
-     Subida de imágenes (Cloudinary)
-  -------------------------------------------------- */
   const handleUploadImages = async () => {
     if (newImages.length === 0) return;
-
     setUploading(true);
+
     const uploadedUrls: string[] = [];
 
     for (const image of newImages) {
@@ -144,10 +121,9 @@ export default function PanelPage() {
       formData.append("upload_preset", "nutricionxsofia");
 
       const res = await fetch(
-        "https://api.cloudinary.com/v1_1/dkzmrfgus/image/upload",
+        `https://api.cloudinary.com/v1_1/dkzmrfgus/image/upload`,
         { method: "POST", body: formData }
       );
-
       const data = await res.json();
       uploadedUrls.push(data.secure_url);
     }
@@ -162,6 +138,7 @@ export default function PanelPage() {
 
     setNewImages([]);
     setUploading(false);
+    setPreviews([]);
   };
 
   return (
@@ -223,7 +200,108 @@ export default function PanelPage() {
         </button>
       </section>
 
-      {/* El resto de secciones (Servicios / Sobre Mi) quedan igual */}
+      {/* Servicios */}
+      <section className="p-4 rounded-md bg-[#DEDFD8]">
+        <h2 className="text-2xl font-bold mb-4">Sección Servicios</h2>
+        {content.servicios.map((serv, index) => (
+          <div
+            key={index}
+            className="mb-4 p-2 border rounded bg-[#DEDFD8] flex flex-col sm:flex-row sm:flex-wrap gap-2"
+          >
+            <p className="w-full sm:w-auto pt-3">Plan {index + 1}</p>
+            <input
+              type="text"
+              placeholder="Título"
+              value={serv.titulo}
+              onChange={(e) =>
+                handleServicioChange(index, "titulo", e.target.value)
+              }
+              className="w-full sm:w-[48%] mb-2 p-3 rounded-lg border border-[#b0aaaa] outline-none focus:ring-2 focus:ring-[#A6A6A6]"
+            />
+            <textarea
+              placeholder="Descripción"
+              value={serv.descripcion}
+              onChange={(e) =>
+                handleServicioChange(index, "descripcion", e.target.value)
+              }
+              className="w-full mb-2 p-3 rounded-lg border border-[#b0aaaa] outline-none focus:ring-2 focus:ring-[#A6A6A6]"
+            />
+            <input
+              type="text"
+              placeholder="Incluye 1"
+              value={serv.incluye1}
+              onChange={(e) =>
+                handleServicioChange(index, "incluye1", e.target.value)
+              }
+              className="w-full sm:w-[48%] mb-2 p-3 rounded-lg border border-[#b0aaaa] outline-none focus:ring-2 focus:ring-[#A6A6A6]"
+            />
+            <input
+              type="text"
+              placeholder="Incluye 2"
+              value={serv.incluye2}
+              onChange={(e) =>
+                handleServicioChange(index, "incluye2", e.target.value)
+              }
+              className="w-full sm:w-[48%] mb-2 p-3 rounded-lg border border-[#b0aaaa] outline-none focus:ring-2 focus:ring-[#A6A6A6]"
+            />
+            <input
+              type="text"
+              placeholder="Ubicación o lugar donde se realiza (opcional)"
+              value={serv.ubicacion}
+              onChange={(e) =>
+                handleServicioChange(index, "ubicacion", e.target.value)
+              }
+              className="w-full mb-2 p-3 rounded-lg border border-[#b0aaaa] outline-none focus:ring-2 focus:ring-[#A6A6A6]"
+            />
+            <input
+              type="text"
+              placeholder="Nota"
+              value={serv.nota}
+              onChange={(e) =>
+                handleServicioChange(index, "nota", e.target.value)
+              }
+              className="w-full sm:w-[48%] mb-2 p-3 rounded-lg border border-[#b0aaaa] outline-none focus:ring-2 focus:ring-[#A6A6A6]"
+            />
+            <input
+              type="text"
+              placeholder="Duración"
+              value={serv.duracion}
+              onChange={(e) =>
+                handleServicioChange(index, "duracion", e.target.value)
+              }
+              className="w-full sm:w-[48%] mb-2 p-3 rounded-lg border border-[#b0aaaa] outline-none focus:ring-2 focus:ring-[#A6A6A6]"
+            />
+          </div>
+        ))}
+        <button
+          onClick={handleSaveServicios}
+          className="mt-2 px-4 py-2 bg-green-600 text-white rounded cursor-pointer"
+        >
+          Guardar Servicios
+        </button>
+      </section>
+
+      {/* Sobre Mi */}
+      <section className="p-4 rounded-md bg-[#DEDFD8]">
+        <h2 className="text-2xl font-bold mb-4">Sección Sobre Mi</h2>
+        {(["parrafo1", "parrafo2", "parrafo3"] as (keyof SobreMiContent)[]).map(
+          (p, i) => (
+            <textarea
+              key={i}
+              placeholder={`Párrafo ${i + 1}`}
+              value={content.sobreMi[p]}
+              onChange={(e) => handleSobreMiChange(p, e.target.value)}
+              className="w-full mb-2 p-3 rounded-lg border border-[#b0aaaa] outline-none focus:ring-2 focus:ring-[#A6A6A6]"
+            />
+          )
+        )}
+        <button
+          onClick={handleSaveSobreMi}
+          className="mt-2 px-4 py-2 bg-purple-600 text-white rounded cursor-pointer"
+        >
+          Guardar Sobre Mi
+        </button>
+      </section>
     </div>
   );
 }
