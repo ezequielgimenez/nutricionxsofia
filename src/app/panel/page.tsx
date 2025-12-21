@@ -1,5 +1,4 @@
-import Image from "next/image";
-
+import Link from "next/link";
 export default function PanelPage() {
   return (
     <div>
@@ -23,24 +22,24 @@ export default function PanelPage() {
             </p>
           </div>
           {/* Botón 1*/}
-          <a href="/contenido">
+          <Link href="/contenido">
             <button
               type="button"
               className="w-full h-14 bg-[#A6A6A6] font-sans text-white text-sm font-semibold py-3 rounded-lg cursor-pointer transition-colors duration-300 hover:bg-[#8F8F8F]"
             >
               Editar contenido de la web
             </button>
-          </a>
+          </Link>
           {/* Botón 2*/}
           <div className="pt-4"></div>
-          <a href="/">
+          <Link href="/">
             <button
               type="button"
               className="w-full h-14 bg-[#A6A6A6] font-sans text-white text-sm font-semibold py-3 rounded-lg cursor-pointer transition-colors duration-300 hover:bg-[#8F8F8F]"
             >
               Salir
             </button>
-          </a>
+          </Link>
         </form>
       </main>
     </div>
