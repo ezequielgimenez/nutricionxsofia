@@ -1,0 +1,57 @@
+{
+  "hero": {
+    "titulo": "ORDENAR TU ALIMENTACIÓN NO TIENE QUE SER UN LÍO",
+    "subtitulo": "Conocé las opciones y reservá tu turno.",
+    "imagenes": [
+      "https://res.cloudinary.com/dkzmrfgus/image/upload/v1766269746/rrajzfd335wfvqs9q7s5.png",
+      "https://res.cloudinary.com/dkzmrfgus/image/upload/v1766269747/cvgpdz1zhmaeza459svp.png",
+      "https://res.cloudinary.com/dkzmrfgus/image/upload/v1766269749/hk7serx9dy9kozrvuz12.png",
+      "https://res.cloudinary.com/dkzmrfgus/image/upload/v1766269750/slfddeqbnh5iklybtzyv.png",
+      "https://res.cloudinary.com/dkzmrfgus/image/upload/v1766269750/m6sc3lkbniopdabpinie.png",
+      "https://res.cloudinary.com/dkzmrfgus/image/upload/v1766269751/vxnc8vooh7twjut4dapv.png"
+    ]
+  },
+  "servicios": [
+    {
+      "titulo": "Consulta",
+      "descripcion": "Encuentro virtual con evaluación del estado nutricional y definición de objetivos a corto y mediano plazo",
+      "incluye1": "Plan nutricional personalizado, adaptado a tus gustos, necesidades y objetivos.",
+      "incluye2": "",
+      "ubicacion": "",
+      "nota": "para las consultas (online y presencial) se recomienda al menos tres encuentros, ya que el proceso nutricional no se basa únicamente en llevarse un plan, sino en el acompañamiento, el seguimiento y los ajustes necesarios para incorporar hábitos y acercarse a los objetivos planteados",
+      "duracion": "1 hora aproximadamente."
+    },
+    {
+      "titulo": "Consulta Presencial",
+      "descripcion": "Encuentro virtual con evaluación del estado nutricional y definición de objetivos a corto y mediano plazo.",
+      "incluye1": "Plan nutricional personalizado, adaptado a tus gustos, necesidades y objetivos.",
+      "incluye2": "",
+      "ubicacion": "Calle 35 905, consultorio 4 - La Plata, BA.",
+      "nota": "para las consultas (online y presencial) se recomienda al menos tres encuentros, ya que el proceso nutricional no se basa únicamente en llevarse un plan, sino en el acompañamiento, el seguimiento y los ajustes necesarios para incorporar hábitos y acercarse a los objetivos planteados",
+      "duracion": "1 hora aproximadamente."
+    },
+    {
+      "titulo": "Presencial + Antropometría",
+      "descripcion": "Encuentro en consultorio con evaluación nutricional y análisis de la composición corporal mediante antropometría (ISAK1).",
+      "incluye1": "Plan nutricional personalizado, adaptado a tus gustos, necesidades y objetivos.",
+      "incluye2": "Informe con diagnóstico antropométrico.",
+      "ubicacion": "Calle 35 905, consultorio 4 - La Plata, BA.",
+      "nota": "para las consultas (online y presencial) se recomienda al menos tres encuentros, ya que el proceso nutricional no se basa únicamente en llevarse un plan, sino en el acompañamiento, el seguimiento y los ajustes necesarios para incorporar hábitos y acercarse a los objetivos planteados",
+      "duracion": "1 hora 15 min aproximadamente."
+    },
+    {
+      "titulo": "Antropometría",
+      "descripcion": "Evaluación de la composición corporal mediante mediciones antropométricas.",
+      "incluye1": "Informe con diagnóstico antropométrico.",
+      "incluye2": "",
+      "ubicacion": "Calle 35 905, consultorio 4 - La Plata, BA.",
+      "nota": "",
+      "duracion": "20-30 minutos aproximadamente."
+    }
+  ],
+  "sobreMi": {
+    "parrafo1": "Acompaño procesos nutricionales desde un enfoque personalizado y flexible, teniendo en cuenta el contexto, los hábitos y las posibilidades reales de cada persona.",
+    "parrafo2": "Trabajo desde el dialogo y el seguimiento, entendiendo que los cambios sostenibles se construyen un día a la vez y no partir de soluciones rígidas.",
+    "parrafo3": "Mi objetivo es brindar herramientas prácticas que puedan incorporarse a la vida cotidiana, promoviendo una relación mas consciente con la alimentación."
+  }
+}
