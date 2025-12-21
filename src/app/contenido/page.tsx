@@ -1,7 +1,7 @@
 // app/contenido/page.tsx
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 
 type HeroContent = {
   titulo: string;
@@ -48,11 +48,23 @@ export default function PanelPage() {
 
   const [newImages, setNewImages] = useState<File[]>([]);
   const [uploading, setUploading] = useState(false);
-  const [previews, setPreviews] = useState<string[]>([]);
 
-  useEffect(() => {
-    setPreviews(newImages.map((file) => URL.createObjectURL(file)));
+  /**
+   * ✅ PREVIEWS derivadas (NO estado)
+   */
+  const previews = useMemo(() => {
+    const urls = newImages.map((file) => URL.createObjectURL(file));
+    return urls;
   }, [newImages]);
+
+  /**
+   * ✅ Cleanup para evitar memory leaks
+   */
+  useEffect(() => {
+    return () => {
+      previews.forEach((url) => URL.revokeObjectURL(url));
+    };
+  }, [previews]);
 
   useEffect(() => {
     fetch("/api/content")
@@ -121,7 +133,7 @@ export default function PanelPage() {
       formData.append("upload_preset", "nutricionxsofia");
 
       const res = await fetch(
-        `https://api.cloudinary.com/v1_1/dkzmrfgus/image/upload`,
+        "https://api.cloudinary.com/v1_1/dkzmrfgus/image/upload",
         { method: "POST", body: formData }
       );
       const data = await res.json();
@@ -138,7 +150,6 @@ export default function PanelPage() {
 
     setNewImages([]);
     setUploading(false);
-    setPreviews([]);
   };
 
   return (
