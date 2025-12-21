@@ -2,8 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
 import { getServerSession } from "next-auth";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
-
+import { authOptions } from "@/lib/auth";
 const contentFile = path.join(process.cwd(), "data", "content.json");
 
 // GET → devuelve el contenido
