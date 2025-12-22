@@ -21,15 +21,15 @@ export const authOptions: NextAuthOptions = {
     }),
   ],
 
-  callbacks: {
-    async signIn({ user }) {
-      if (!user.email) return false;
-      return (
-        user.email.toLowerCase().trim() ===
-        process.env.ALLOWED_EMAIL?.toLowerCase().trim()
-      );
-    },
-  },
+  // callbacks: {
+  //   async signIn({ user }) {
+  //     if (!user.email) return false;
+  //     return (
+  //       user.email.toLowerCase().trim() ===
+  //       process.env.ALLOWED_EMAIL?.toLowerCase().trim()
+  //     );
+  //   },
+  // },
 
   session: {
     strategy: "jwt",
