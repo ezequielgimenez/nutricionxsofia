@@ -9,11 +9,11 @@ export const authOptions: NextAuthOptions = {
   providers: [
     EmailProvider({
       server: {
-        host: process.env.EMAIL_SERVER_HOST,
-        port: Number(process.env.EMAIL_SERVER_PORT),
+        host: "smtp.resend.com",
+        port: 587,
         auth: {
-          user: process.env.EMAIL_SERVER_USER,
-          pass: process.env.EMAIL_SERVER_PASSWORD,
+          user: "resend",
+          pass: process.env.RESEND_API_KEY,
         },
       },
       from: process.env.EMAIL_FROM,
@@ -21,15 +21,15 @@ export const authOptions: NextAuthOptions = {
     }),
   ],
 
-  // callbacks: {
-  //   async signIn({ user }) {
-  //     if (!user.email) return false;
-  //     return (
-  //       user.email.toLowerCase().trim() ===
-  //       process.env.ALLOWED_EMAIL?.toLowerCase().trim()
-  //     );
-  //   },
-  // },
+  callbacks: {
+    async signIn({ user }) {
+      if (!user.email) return false;
+      return (
+        user.email.toLowerCase().trim() ===
+        process.env.ALLOWED_EMAIL?.toLowerCase().trim()
+      );
+    },
+  },
 
   session: {
     strategy: "jwt",
