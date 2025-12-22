@@ -1,10 +1,9 @@
 "use client";
-import Link from "next/link";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-
+import Loading from "@/app/loading";
 //hook
 import { useContent } from "@/hooks/useContent";
 
@@ -46,7 +45,7 @@ export default function HeroSectionComp() {
     };
   }, [emblaApi]);
 
-  if (!content) return <p>Cargando...</p>;
+  if (!content) return <Loading></Loading>;
 
   return (
     <div ref={emblaRef} className="relative overflow-hidden">

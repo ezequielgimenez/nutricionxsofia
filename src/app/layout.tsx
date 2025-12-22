@@ -46,6 +46,11 @@ export const metadata: Metadata = {
   title: "NutricionxSofía",
   description:
     "Acompaño procesos nutricionales desde un enfoque personalizado y flexible, teniendo en cuenta el contexto, los hábitos y las posibilidades reales de cada persona.",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({

@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { PlanCard } from "./Cards";
 import { useContent } from "@/hooks/useContent";
-
+import Loading from "@/app/loading";
 export default function PlanesComp() {
   const { content, saveContent } = useContent();
 
-  if (!content) return <p>Cargando...</p>;
+  if (!content) return <Loading></Loading>;
   const icons = [
     "/icons/2-plan2.png",
     "/icons/3-plan3.png",

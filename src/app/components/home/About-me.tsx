@@ -1,10 +1,11 @@
 import Image from "next/image";
 import { useContent } from "@/hooks/useContent";
-
+import Loading from "@/app/loading";
 export default function AboutMeComp() {
   const { content, saveContent } = useContent();
 
-  if (!content) return <p>Cargando...</p>;
+  if (!content) return <Loading></Loading>;
+
   return (
     <div
       id="sobre-mi"
