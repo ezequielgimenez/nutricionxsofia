@@ -9,11 +9,11 @@ export const authOptions: NextAuthOptions = {
   providers: [
     EmailProvider({
       server: {
-        host: "smtp.gmail.com",
-        port: 587,
+        host: process.env.EMAIL_SERVER_HOST,
+        port: Number(process.env.EMAIL_SERVER_PORT),
         auth: {
-          user: "ezequielgimenezdev@gmail.com",
-          pass: process.env.EMAIL_APP_PASSWORD,
+          user: process.env.EMAIL_SERVER_USER,
+          pass: process.env.EMAIL_SERVER_PASSWORD,
         },
       },
       from: process.env.EMAIL_FROM,
