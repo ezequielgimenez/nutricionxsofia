@@ -43,7 +43,7 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: "NutricionxSofía",
+  title: "nutricionxsofia",
   description:
     "Acompaño procesos nutricionales desde un enfoque personalizado y flexible, teniendo en cuenta el contexto, los hábitos y las posibilidades reales de cada persona.",
   icons: {
