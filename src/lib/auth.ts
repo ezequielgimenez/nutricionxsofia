@@ -12,8 +12,8 @@ export const authOptions: NextAuthOptions = {
         host: "smtp.mailersend.net",
         port: 587, // también puede ser 2525
         auth: {
-          user: process.env.MAILERSEND_USER, // pones MS_BY8Myv@test-zxk54v8n726ljy6v.mlsender.net
-          pass: process.env.MAILERSEND_PASS, // pones mssp.s1FZ6Pg.z86org8xem04ew13.MQOlC2i
+          user: process.env.MAILERSEND_USER,
+          pass: process.env.MAILERSEND_PASS,
         },
       },
       from: process.env.EMAIL_FROM, // debe ser un correo verificado en MailerSend
