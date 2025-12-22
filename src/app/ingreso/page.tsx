@@ -9,19 +9,10 @@ export default function IngresoPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const res = await signIn("email", {
+    await signIn("email", {
       email,
-      redirect: false, // <-- evita recarga automática
       callbackUrl: "/panel",
     });
-
-    if (res?.error) {
-      // mostrar mensaje de error en pantalla
-      console.log("Error enviando enlace:", res.error);
-    } else {
-      // mostrar mensaje de éxito
-      console.log("Enlace enviado correctamente");
-    }
   };
 
   return (
