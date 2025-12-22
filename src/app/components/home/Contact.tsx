@@ -90,7 +90,7 @@ export default function ContactComp() {
         <div className="xs:w-[300px] sm:w-[500px] lg:w-[800px] xl:w-[1152px] h-px bg-[#A6A6A6]"></div>
         <div className="pt-4.5 pb-18.75">
           <p className="font-sans text-center text-white text-xs font-light">
-            © 2025 NutricionxSofia. Lic. en Nutrición – MP 12845 <br />
+            © 2026 NutricionxSofia. Lic. en Nutrición – MP 12845 <br />
             Atención online y presencial. Todos los derechos reservados.
             {/* <br />
             <span className="font-sans text-[#A6A6A6] text-xs">
