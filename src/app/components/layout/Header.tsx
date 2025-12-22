@@ -59,21 +59,21 @@ export default function HeaderComp() {
           href="#planes"
           onClick={openNav}
         >
-          Planes
+          PLANES
         </a>
         <a
           className="py-5 text-[25px] font-serif font-semibold text-[#A6A6A6]"
           href="#sobre-mi"
           onClick={openNav}
         >
-          Sobre mí
+          SOBRE MÍ
         </a>
         <a
           className="py-5 text-[25px] font-serif font-semibold text-[#A6A6A6]"
           href="#contacto"
           onClick={openNav}
         >
-          Contacto
+          CONTACTO
         </a>
       </div>
 
