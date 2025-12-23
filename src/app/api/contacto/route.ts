@@ -109,7 +109,7 @@ export async function POST(req: Request) {
 
     await transporter.sendMail({
       from: `"Contacto Web - nutriciónxsofía" <${process.env.EMAIL_FROM}>`, // tu correo verificado en MailerSend
-      to: "ezequielezequiel9@gmail.com", // adónde querés recibir los mensajes
+      to: "nutricionxsofia@gmail.com", // adónde querés recibir los mensajes
       replyTo: email, // el mail del usuario que envía el formulario
       subject: `Nueva consulta: ${motivo}`,
       html: `

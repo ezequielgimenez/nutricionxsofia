@@ -93,12 +93,11 @@ export default function HeroSectionComp() {
     md:text-5xl
     lg:text-[65px]
     max-w-xs sm:max-w-md md:max-w-2xl
-    [&_em]:italic
   "
           dangerouslySetInnerHTML={{
             __html: content.hero.titulo.replace(
               "ALIMENTACIÓN",
-              "<em>ALIMENTACIÓN</em><br />"
+              "<br/> ALIMENTACIÓN <br/>"
             ),
           }}
         ></h1>
