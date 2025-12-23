@@ -33,11 +33,11 @@ export default function PlanesComp() {
           TIPOS DE PLAN
         </p>
         <h3 className="font-serif text-[32px] sm:text-[40px] xl:text-[48px] pt-2">
-          Elegí el plan ideal para vos
+          Elegí la opción que acompaña tu proceso
         </h3>
         <p className="font-sans text-[#A6A6A6] text-[16px] text-xs font-normal pt-7 px-4">
-          Desde asesoría online hasta la medición antropométrica precisa.
-          Encontrá lo <br /> que tu cuerpo necesita.
+          Desde la asesoría online hasta la medición antropométrica precisa, un
+          acompañamiento que escucha a tu cuerpo y respeta tu contexto
         </p>
       </div>
       {/* Container de cards */}
