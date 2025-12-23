@@ -26,7 +26,11 @@ export default function HeroSectionComp() {
   const { content, saveContent } = useContent();
 
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
-    Autoplay({ delay: 3000 }),
+    Autoplay({
+      delay: 3000,
+      stopOnInteraction: false,
+      stopOnMouseEnter: false,
+    }),
   ]);
   const [selectedIndex, setSelectedIndex] = useState(0);
 
