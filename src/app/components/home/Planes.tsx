@@ -36,8 +36,8 @@ export default function PlanesComp() {
           Elegí la opción que acompaña tu proceso
         </h3>
         <p className="font-sans text-[#A6A6A6] text-[16px] text-xs font-normal pt-7 px-4">
-          Desde la asesoría online hasta la medición antropométrica precisa, un
-          acompañamiento que escucha a tu cuerpo y respeta tu contexto
+          Desde la asesoría online hasta la medición antropométrica precisa,{" "}
+          <br /> un acompañamiento que escucha a tu cuerpo y respeta tu contexto
         </p>
       </div>
       {/* Container de cards */}
