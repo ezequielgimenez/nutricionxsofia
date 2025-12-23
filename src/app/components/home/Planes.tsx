@@ -104,10 +104,10 @@ export default function PlanesComp() {
               <Image
                 src="/icons/like.png"
                 alt="check"
-                width={13}
-                height={12}
+                width={14}
+                height={13}
                 quality={85}
-                className="pt-1"
+                className="pt-1 shrink-0"
               />
               <p className="font-sans text-[#6B7280] text-[14px] font-normal">
                 <span className="text-[#374151] font-semibold">
