@@ -33,7 +33,7 @@ export default function PlanesComp() {
           TIPOS DE PLAN
         </p>
         <h3 className="font-serif text-[32px] sm:text-[40px] xl:text-[48px] pt-2">
-          Elegí la opción que acompaña tu proceso
+          Elegí la opción que <br /> acompaña tu proceso
         </h3>
         <p className="font-sans text-[#A6A6A6] text-[16px] text-xs font-normal pt-7 px-4">
           Desde la asesoría online hasta la medición antropométrica precisa,{" "}
