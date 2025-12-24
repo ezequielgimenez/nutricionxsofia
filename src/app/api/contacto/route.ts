@@ -1,4 +1,4 @@
-// import { NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 // import { Resend } from "resend";
 
 // const resend = new Resend(process.env.RESEND_API_KEY);
@@ -10,7 +10,7 @@
 //     const { nombre, email, motivo, mensaje } = body;
 
 //     await resend.emails.send({
-//       from: "Contacto <onboarding@resend.dev>",
+//       from: "Contacto <ezequiel@resend.dev>",
 //       to: ["ezequielgimenezdev@gmail.com"],
 //       replyTo: email,
 //       subject: `Nueva consulta: ${motivo}`,
@@ -82,7 +82,9 @@
 //   }
 // }
 
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
   try {
@@ -96,21 +98,10 @@ export async function POST(req: Request) {
       );
     }
 
-    // Configuración de MailerSend
-    const transporter = nodemailer.createTransport({
-      host: "smtp.mailersend.net",
-      port: 587, // TLS
-      secure: false, // usar TLS en 587
-      auth: {
-        user: process.env.MAILERSEND_USER,
-        pass: process.env.MAILERSEND_PASS,
-      },
-    });
-
-    await transporter.sendMail({
-      from: `"Contacto Web - nutriciónxsofía" <${process.env.EMAIL_FROM}>`, // tu correo verificado en MailerSend
-      to: "nutricionxsofia@gmail.com", // adónde querés recibir los mensajes
-      replyTo: email, // el mail del usuario que envía el formulario
+    await resend.emails.send({
+      from: `"Contacto Web - nutriciónxsofía" <${process.env.EMAIL_FROM}>`,
+      to: "ezequielezequiel9@gmail.com",
+      replyTo: email,
       subject: `Nueva consulta: ${motivo}`,
       html: `
         <h2>Nueva consulta desde la web</h2>

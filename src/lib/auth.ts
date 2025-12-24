@@ -9,14 +9,14 @@ export const authOptions: NextAuthOptions = {
   providers: [
     EmailProvider({
       server: {
-        host: "smtp.mailersend.net",
-        port: 587, // también puede ser 2525
+        host: "smtp.resend.com",
+        port: 587,
         auth: {
-          user: process.env.MAILERSEND_USER,
-          pass: process.env.MAILERSEND_PASS,
+          user: "resend",
+          pass: process.env.RESEND_API_KEY,
         },
       },
-      from: process.env.EMAIL_FROM, // debe ser un correo verificado en MailerSend
+      from: `"Enlace de autenticación - nutriciónxsofía" <${process.env.EMAIL_FROM}>`,
       maxAge: 10 * 60,
     }),
   ],
