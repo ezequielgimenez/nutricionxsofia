@@ -100,7 +100,7 @@ export async function POST(req: Request) {
 
     await resend.emails.send({
       from: `"Contacto Web - nutriciónxsofía" <${process.env.EMAIL_FROM}>`,
-      to: "ezequielezequiel9@gmail.com",
+      to: "nutricionxsofia@gmail.com",
       replyTo: email,
       subject: `Nueva consulta: ${motivo}`,
       html: `
