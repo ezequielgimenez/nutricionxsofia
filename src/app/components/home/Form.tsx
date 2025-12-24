@@ -93,6 +93,7 @@ export default function ContactForm() {
           <option value="Asesoría online">Asesoría online</option>
           <option value="Consulta online">Consulta online</option>
           <option value="Consulta presencial">Consulta presencial</option>
+          <option value="Antropometria">Antropometria </option>
           <option value="Otro">Otro</option>
         </select>
 
