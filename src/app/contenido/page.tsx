@@ -178,7 +178,7 @@ export default function PanelPage() {
           type="file"
           multiple
           onChange={(e) => setNewImages(Array.from(e.target.files || []))}
-          className="mb-2"
+          className="mb-2 rounded-xl px-2 bg-amber-500"
         />
 
         <button
