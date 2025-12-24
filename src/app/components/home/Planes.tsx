@@ -134,7 +134,7 @@ export default function PlanesComp() {
               </p>
             </div>
             <a
-              href="https://wa.link/pzycav"
+              href="https://wa.link/dy84io"
               target="_blank"
               rel="noopener noreferrer"
             >
