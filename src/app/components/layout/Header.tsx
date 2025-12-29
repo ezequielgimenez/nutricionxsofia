@@ -38,10 +38,17 @@ export default function HeaderComp() {
       </div>
 
       <div
-        className={` ${
-          showNav ? "flex" : "hidden"
-        } flex-col items-center fixed  top-0 left-0 w-screen h-125  bg-[rgba(53,47,47,0.96)]
- z-50 rounded-b-4xl`}
+        className={`
+    fixed top-0 left-0 w-screen h-125 bg-[rgba(53,47,47,0.96)]
+    z-50 rounded-b-4xl
+    flex flex-col items-center
+    transition-all duration-300 ease-out
+    ${
+      showNav
+        ? "opacity-100 translate-y-0 pointer-events-auto"
+        : "opacity-0 -translate-y-6 pointer-events-none"
+    }
+  `}
       >
         <div className="flex w-full justify-between px-4 py-4">
           <div onClick={openNav}>
