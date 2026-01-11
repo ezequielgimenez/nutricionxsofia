@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import AOSProvider from "./AosProvider";
 import { AuthProvider } from "./providers";
 
+// comentario
+
 import {
   DM_Sans,
   Playfair_Display,
