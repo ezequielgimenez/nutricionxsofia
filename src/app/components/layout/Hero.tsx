@@ -57,7 +57,7 @@ export default function HeroSectionComp() {
         {content.hero.imagenes.map((url, index) => (
           <div
             key={index}
-            className="relative min-w-full xs:h-[85vh] sm:h-[80vh] md:h-[90vh] xl:h-[120vh]"
+            className="relative min-w-full xs:h-[85vh] sm:h-[80vh] md:h-[90vh] xl:h-screen"
           >
             {/* Imagen */}
 
