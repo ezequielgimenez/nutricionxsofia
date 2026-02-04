@@ -88,14 +88,32 @@ export default function ContactComp() {
       </div>
       <div className="flex flex-col items-center pt-20 xs:px-4 sm:px-24">
         <div className="xs:w-[300px] sm:w-[500px] lg:w-[800px] xl:w-[1152px] h-px bg-[#A6A6A6]"></div>
-        <div className="pt-4.5 pb-18.75">
+        <div className="pt-4.5 pb-16">
           <p className="font-sans text-center text-white text-xs font-light">
             © 2026 NutricionxSofia. Lic. en Nutrición – MP 12845 <br />
             Atención online y presencial. Todos los derechos reservados.
-            {/* <br />
-            <span className="font-sans text-[#A6A6A6] text-xs">
-              Developed by <a href="">Ezequiel</a>
-            </span> */}
+            <br />
+            <span className="font-sans text-white text-xs">
+              Desarrollado por{" "}
+              <a
+                href="https://www.egsitios.com.ar/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                font-normal
+                text-[#BDBDBD]
+                hover:text-white
+                underline
+                underline-offset-4
+                decoration-transparent
+                hover:decoration-white
+                transition-all
+                duration-300
+              "
+              >
+                EG Sitios.
+              </a>
+            </span>
           </p>
         </div>
       </div>
