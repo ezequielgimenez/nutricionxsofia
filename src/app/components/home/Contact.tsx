@@ -7,7 +7,7 @@ export default function ContactComp() {
       id="contacto"
       className="-mt-7 relative z-10  rounded-t-[44px] bg-[#605D5D] h-auto"
     >
-      <div className="flex justify-between xs:px-4 sm:px-24 xs:flex-col lg:flex-row xl:px-36 py-20">
+      <div className="flex justify-between max-w-6xl mx-auto flex-col px-8 lg:flex-row py-20 items-center">
         <div className="xs:pb-16 lg:pb-0">
           <h3 className="xs:text-center lg:text-start font-mono font-bold text-white text-[36px] pb-2">
             Contacto

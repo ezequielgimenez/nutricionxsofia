@@ -84,7 +84,7 @@ export default function HeaderComp() {
         </a>
       </div>
 
-      <div className="hidden lg:flex justify-between bg-[#DEDFD8] h-21.5">
+      <div className="hidden lg:flex bg-[#DEDFD8] h-21.5 max-w-7xl mx-auto py-8 items-center justify-between">
         <div className="cursor-pointer">
           <Image
             src="/logo/logo.png"

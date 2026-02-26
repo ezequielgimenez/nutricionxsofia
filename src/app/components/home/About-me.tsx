@@ -9,7 +9,7 @@ export default function AboutMeComp() {
   return (
     <div
       id="sobre-mi"
-      className="flex h-auto xs:flex-col xs:items-center lg:flex-row justify-center xs:gap-8 lg:gap- 6.75 bg-[#DEDFD8]  pt-23.75 pb-[140px]"
+      className="flex h-[900px] xs:flex-col xs:items-center lg:flex-row justify-center xs:gap-8 lg:gap- 6.75 bg-[#DEDFD8]  pt-23.75 pb-[140px]"
     >
       <div data-aos="fade-up">
         <Image
