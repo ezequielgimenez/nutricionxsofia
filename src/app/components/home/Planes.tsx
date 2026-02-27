@@ -48,7 +48,7 @@ export default function PlanesComp() {
       >
         {/* card 1 */}
         <div
-          className="flex flex-col xs:w-87 xl:w-101.5 h-147.5 bg-[#DEDFD8] px-8 xl:px-0 xl:pl-8.25 rounded-3xl transition-transform duration-300 ease-in-out hover:scale-105 hover:scale-[1.02] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)]
+          className="flex flex-col xs:w-87 xl:w-101.5 h-[610px] bg-[#DEDFD8] px-8 xl:px-0 xl:pl-8.25 rounded-3xl transition-transform duration-300 ease-in-out hover:scale-105 hover:scale-[1.02] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)]
 "
         >
           <div className="pt-8.25">
@@ -155,7 +155,7 @@ export default function PlanesComp() {
             className={
               index === content.servicios.length - 1
                 ? "xl:w-[842px] xl:h-[396px]"
-                : "xl:h-[591px]"
+                : "xl:h-[610px]"
             }
             title={plan.titulo}
             description={plan.descripcion}

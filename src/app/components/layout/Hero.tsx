@@ -57,7 +57,7 @@ export default function HeroSectionComp() {
         {content.hero.imagenes.map((url, index) => (
           <div
             key={index}
-            className="relative min-w-full xs:h-[85vh] sm:h-[80vh] md:h-[90vh] xl:h-screen"
+            className="relative min-w-full xs:h-[85vh] sm:h-[80vh] md:h-[90vh] xl:h-[900px]"
           >
             {/* Imagen */}
 
@@ -97,7 +97,7 @@ export default function HeroSectionComp() {
           dangerouslySetInnerHTML={{
             __html: content.hero.titulo.replace(
               "ALIMENTACIÓN",
-              "<br/> ALIMENTACIÓN <br/>"
+              "<br/> ALIMENTACIÓN <br/>",
             ),
           }}
         ></h1>
