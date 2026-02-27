@@ -44,7 +44,7 @@ export default function PlanesComp() {
       {/* Container de cards */}
       <div
         data-aos="fade-up"
-        className="flex flex-col lg:flex-row flex-wrap justify-center items-center lg:items-start gap-5 pt-16.25 sm:px-4"
+        className="w-full max-w-[1440px] mx-auto flex flex-col items-center lg:flex-row flex-wrap lg:items-start lg:justify-center gap-5 pt-16.25 sm:px-4"
       >
         {/* card 1 */}
         <div
