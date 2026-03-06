@@ -62,7 +62,7 @@ export function PlanCard({
               />
               <p className="text-sm text-[#6B7280]">{item}</p>
             </div>
-          ) : null
+          ) : null,
         )}
 
         {ubicacion && (

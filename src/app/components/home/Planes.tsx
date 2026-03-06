@@ -11,6 +11,7 @@ export default function PlanesComp() {
     "/icons/3-plan3.png",
     "/icons/4-plan4.png",
     "/icons/5-plan5.png",
+    "/icons/2-plan2.png",
   ];
 
   return (
