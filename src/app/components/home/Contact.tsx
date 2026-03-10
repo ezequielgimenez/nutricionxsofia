@@ -96,7 +96,7 @@ export default function ContactComp() {
             <span className="font-sans text-white text-xs">
               Desarrollado por{" "}
               <a
-                href="https://www.egsitios.com.ar/"
+                href="https://www.webkelar.com.ar/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="
@@ -111,7 +111,7 @@ export default function ContactComp() {
                 duration-300
               "
               >
-                EG Sitios.
+                Webkelar Digital.
               </a>
             </span>
           </p>
